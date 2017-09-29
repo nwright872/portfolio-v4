@@ -9,10 +9,11 @@ html{
 }
 
 body{
-  background:url(assets/background.jpg);
-  background-size: 133vw;
+  background:url(assets/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  /*background-size: 133vw;*/
+  /*background-repeat: no-repeat;*/
   padding:10px;
-  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -31,6 +32,7 @@ section.skills{
 section.quests {
   width: 96%;
   height: 96vh;
+  border-radius: 5px;
   position: absolute;
   background-color: rgba(0,0,0,0.7);
   transition: left 0.2s ease;
@@ -89,12 +91,12 @@ section.map {
 }
 
 button.left{
-  background-image: url('assets/leftarrow.png');
+  background-image: url('assets/icons/arrow-left.png');
   left: 2%;
 
 }
 button.right{
-  background-image: url('assets/rightarrow.png');
+  background-image: url('assets/icons/arrow-right.png');
   right: 2%;
 }
 button.menu-arrow{
@@ -109,10 +111,10 @@ button.menu-arrow{
   text-align: center;
   text-decoration: none;
   font-size: 14px;
-  margin: 0px -41px;
-  width: 65px;
-  height: 8%;
-  top: 53%;
+  margin: 0px;
+  width: 58px;
+  height: 58px;
+  top: 88%;
   cursor: pointer;
   font-family: 'Roboto Slab', serif;
 }
@@ -142,16 +144,12 @@ button.menu-arrow{
 }
 
 .items{
-  max-height: 500px;
+
+  max-height: 100%;
   background-color: rgba(0,0,0,0.);
   overflow: hidden;
 }
 
-.me{
-  width: 40%;
-  min-height: 300px;
-  backgrond-color: #eee;
-}
 .item-table{
   margin: auto;
 }
@@ -159,36 +157,42 @@ ul.boxes{
   list-style: none;
   margin: auto;
 }
-li.box{
-  border: solid 3px rgba(0,0,0,0.5);
-  background-color: rgba(0,0,0,0.5);
-  float: left;
-  display: block;
-  padding: 7px;
-  margin:4px;
-  margin-top:0px;
-}
-li.box :hover{
-  padding: 2px;
+
+ul.boxes :hover{
   cursor: pointer;
   transition: .05s;
 }
+
+li.box :hover{
+  border: solid 3px rgba(201, 201, 201, 0.67);
+  border-radius: 2px;
+}
+
 li.box img{
-  max-width: 90px;
-  max-height: 90px;
+  background-color: rgba(0,0,0,0.5);
+  border: solid 3px rgba(0,0,0,0.4);
+  float: left;
+  display: block;
+  padding: 3px;
+  margin: 5px;
+  margin-top:0px;
+}
+
+li.box img{
+  max-width: 110px;
+  max-height: 110px;
 }
 .item-details{
   font-size: larger;
   background-color: rgba(0,0,0,0.5);
-  min-height: 24vh;
+  max-height: 22vh;
+  height: 220px;
   z-index: 2;
   position: absolute;
   bottom: 100px;
-  width: 55vw;
-  left: 41vw;
-  padding-right: 10px;
-  text-align: left;
-  display: none;
+  width: 75vw;
+  left: 10vw;
+  padding-right: 33px;
 }
 .item-icon img{
   margin-top: 40px;
@@ -279,6 +283,41 @@ button {
     animation-name: animatetop;
     animation-duration: 0.4s
 }
+
+.ratio-16-9,
+.ratio-16-10,
+.ratio-square {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.ratio-16-9 {
+    padding-top: 56.25%; /* This is your aspect-ratio */
+}
+
+.ratio-16-10 {
+    padding-top: 62.5%; /* This is your aspect-ratio */
+}
+
+.ratio-square {
+    padding-top: 100%; /* This is your aspect-ratio */
+}
+
+.ratio-inner {
+    display: block;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0}
