@@ -4,88 +4,42 @@
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Menu</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/e2fae63211.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="code.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body class="xpos1" onload="noSelect()">
-    <section class="quests flex-wrapper">
-      <div class="navi flex-grid">
-        <div class="d-col-3 t-col-2 m-col-4">
-          <div class="heart">
-            <img src="assets/heart.png" alt="icon">
-            <img src="assets/heart.png" alt="icon">
-            <img src="assets/heart.png" alt="icon">
-            <img src="assets/heart.png" alt="icon">
-            <h3>
-              Nick Wright
-            </h3>
-          </div>
-        </div>
-        <div class="header d-col-2 t-col-2 m-col-4">
-          <h1>
-            Quests
-          </h1>
-        </div>
-        <div class="header d-col-2 t-col-2 m-col-2">
-          <h1>
-            Items
-          </h1>
-        </div>
-        <div class="header d-col-2 t-col-2 m-col-4">
-          <h1>
-            Map
-          </h1>
-        </div>
-        <div class="d-col-3 t-col-2 m-col-4">
-          <div class="coin">
-            <img src="assets/coin.png" alt="icon">
-            <h3>
-            53
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="menu-content flex-grid">
-        </div>
-      </div>
-
-      <button type="button" class="menu-arrow right" onclick="goToSection(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-    </section>
-
-    <!-- SKILLS SECTION -->
-
-    <section class="skills flex-wrapper">
-      <div class="navi flex-grid">
-        <div class="d-col-3 t-col-2 m-col-4">
+    <section class="quests">
+      <div class="navi row">
+        <div class="col-lg-3 col-sm-3">
           <div class="heart">
             <img src="assets/icons/heart.png" alt="icon">
             <img src="assets/icons/heart.png" alt="icon">
             <img src="assets/icons/heart.png" alt="icon">
             <img src="assets/icons/heart.png" alt="icon">
-            <!-- <h3>
-              Nick Wright
-            </h3> -->
           </div>
         </div>
-        <div class="header d-col-2 t-col-2 m-col-4">
-          <h1>
+        <div class="header-selected header col-lg-2 col-sm-2" onclick="goToSection(0)">
+          <p>
             Quests
-          </h1>
+          </p>
         </div>
-        <div class="header d-col-2 t-col-2 m-col-2">
-          <h1>
-            Items
-          </h1>
+        <div class="header col-lg-2 col-sm-2" onclick="goToSection(1)">
+          <p>
+            Inventory
+          </p>
         </div>
-        <div class="header d-col-2 t-col-2 m-col-4">
-          <h1>
+        <div class="header col-lg-2 col-sm-2" onclick="goToSection(2)">
+          <p>
             Map
-          </h1>
+          </p>
         </div>
-        <div class="d-col-3 t-col-2 m-col-4">
+        <div class="col-lg-3 col-sm-3">
           <div class="coin">
             <img src="assets/icons/coin.png" alt="icon">
             <h3>
@@ -94,8 +48,155 @@
           </div>
         </div>
       </div>
-      <div class="menu-content flex-grid">
-        <div class="items d-col-6 t-col-6 m-col-12">
+      <div class="menu-content">
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- <h4 class="quest-title">Side Quests</h4> -->
+            <ul class="quest-wrp">
+              <a class="quest-link" href="#quest-1">
+                <li class="quest">
+                  <i class="fa fa-2x fa-print" aria-hidden="true"></i>
+                  <h2>Request a Quote Feature</h2>
+                  <p>Advantage Sign &amp; Graphic Solutions</p>
+                </li>
+              </a>
+              <a class="quest-link" href="#quest-2">
+                <li class="quest">
+                  <i class="fa fa-2x fa-sitemap" aria-hidden="true"></i>
+                  <h2>Ecommerce Redesign</h2>
+                  <p>Advantage Sign &amp; Graphic Solutions</p>
+                </li>
+              </a>
+              <a class="quest-link" href="#quest-3">
+                <li class="quest">
+                  <i class="fa fa-2x fa-book" aria-hidden="true"></i>
+                  <h2>Product Catalog</h2>
+                  <p>Advantage Sign &amp; Graphic Solutions</p>
+                </li>
+              </a>
+              <a class="quest-link" href="#quest-4">
+                <li class="quest">
+                  <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+                  <h2>Email Marketing</h2>
+                  <p>Advantage Sign &amp; Graphic Solutions</p>
+                </li>
+              </a>
+              <a class="quest-link" href="#quest-5">
+                <li class="quest">
+                  <i class="fa fa-2x fa-coffee" aria-hidden="true"></i>
+                  <h2>Fishladder</h2>
+                  <!-- http://fishladder.net/ -->
+                  <p>Greencup Design</p>
+                </li>
+              </a>
+              <a class="quest-link" href="#quest-6">
+                <li class="quest">
+                  <i class="fa fa-2x fa-leaf" aria-hidden="true"></i>
+                  <h2>Midwest Charm With Anna</h2>
+                  <!-- https://midwestcharmwithanna.com/ -->
+                  <p>Interknights</p>
+                </li>
+              </a>
+              <a class="quest-link" href="#quest-7">
+                <li class="quest">
+                  <i class="fa fa-2x fa-paint-brush" aria-hidden="true"></i>
+                  <h2>Trifecta</h2>
+                  <!-- http://trifecta.msu.edu/ -->
+                  <p>Michigan State Univeristy</p>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div class="quest-section">
+              <article id="quest-1">
+                <h2>Request a Quote Feature</h2>
+                <p>Tasked with creating a feature for large format equipment to help flesh the site out and generate leads.</p>
+                <img class="quest-image" src="assets/request-quote1.png">
+                <img class="quest-image" src="assets/request-quote4.png">
+                <img class="quest-image" src="assets/request-quote2.jpg">
+                <img class="quest-image" src="assets/request-quote3.png">
+              </article>
+              <article id="quest-2">
+                <h2>Ecomerce Redesign</h2>
+                <p></p>
+                <img class="quest-image" src="assets/site-redesign1.png">
+                <img class="quest-image" src="assets/site-redesign2.png">
+                <img class="quest-image" src="assets/site-redesign3.jpg">
+              </article>
+              <article id="quest-3">
+                <h2>Product Catalog</h2>
+                <p></p>
+                <img class="quest-image" src="assets/catalog.jpg">
+                <img class="quest-image" src="assets/catalog2.jpg">
+              </article>
+              <article id="quest-4">
+                <h2>Email Marketing</h2>
+                <p></p>
+                <img class="quest-image" src="assets/email-mkt2.png">
+                <img class="quest-image" src="assets/email-mkt1.png">
+              </article>
+              <article id="quest-5">
+                <h2>Fishladder</h2>
+                <p></p>
+                <img class="quest-image" src="assets/fishladder1.png">
+                <img class="quest-image" src="assets/fishladder2.png">
+              </article>
+              <article id="quest-6">
+                <h2>Midwest Charm With Anna</h2>
+                <p></p>
+                <img class="quest-image" src="assets/midwest-charm1.png">
+              </article>
+              <article id="quest-7">
+                <h2>Trifecta</h2>
+                <p></p>
+                <img class="quest-image" src="assets/trifecta1.png">
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="menu-arrow right" onclick="goToSection(1)"></button>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills">
+      <div class="navi row">
+        <div class="col-lg-3 col-sm-3">
+          <div class="heart">
+            <img src="assets/icons/heart.png" alt="icon">
+            <img src="assets/icons/heart.png" alt="icon">
+            <img src="assets/icons/heart.png" alt="icon">
+            <img src="assets/icons/heart.png" alt="icon">
+          </div>
+        </div>
+        <div class="header col-lg-2 col-sm-2" onclick="goToSection(0)" >
+          <p>
+            Quests
+          </p>
+        </div>
+        <div class="header-selected header col-lg-2 col-sm-2">
+          <p>
+            Inventory
+          </p>
+        </div>
+        <div class="header col-lg-2 col-sm-2" onclick="goToSection(2)">
+          <p>
+            Map
+          </p>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+          <div class="coin">
+            <img src="assets/icons/coin.png" alt="icon">
+            <h3>
+            53
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-content row">
+        <div class="items col-6">
           <div class="item-table">
             <ul class="boxes">
               <li class="box" id="item-photoshop-icon">
@@ -104,119 +205,315 @@
               <li class="box" id="item-illustrator-icon">
                 <img src="assets/icons/il.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-indesign-icon">
                 <img src="assets/icons/id.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-html-icon">
                 <img src="assets/icons/html.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-css-icon">
                 <img src="assets/icons/css.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-js-icon">
                 <img src="assets/icons/js.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-3d-icon">
                 <img src="assets/icons/3d.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-email-icon">
                 <img src="assets/icons/email.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-brand-shield-icon">
                 <img src="assets/icons/brand-shield.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-print-book-icon">
                 <img src="assets/icons/print-book.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-key-icon">
                 <img src="assets/icons/key.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-brush-icon">
                 <img src="assets/icons/brush.png" alt="icon">
               </li>
-               <li class="box">
+               <li class="box" id="item-magnifying-glass-icon">
                 <img src="assets/icons/magnifying-glass.png" alt="icon">
               </li>
-              <li class="box">
+              <li class="box" id="item-spyglass-icon">
                 <img src="assets/icons/spyglass.png" alt="icon">
               </li>
             </ul>
           </div>
         </div>
-        <div class="items d-col-9 t-col-6 m-col-12">
+        <div class="col-6">
           <div class="ratio-square">
-            <div class="ratio-inner"><iframe width="600" height="540" src="https://sketchfab.com/models/ceae5fba0de94c2db1a31637e05be5e8/embed?autostart=1&amp;camera=0&amp;preload=1&amp;transparent=1&amp;ui_related=0" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+            <div class="ratio-inner"><iframe width="600" height="600" src="https://sketchfab.com/models/ceae5fba0de94c2db1a31637e05be5e8/embed?autostart=1&amp;camera=0&amp;preload=1&amp;transparent=1&amp;ui_related=0" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
             </div>
           </div>
         </div>
       </div>
       <!-- Photoshop -->
       <div id="item-photoshop-details" class="item-details flex-grid">
-        <div class="d-col-3 t-col-2 m-col-4">
-          <div class="item-icon">
-              <img src="assets/icons/ps.png" alt="icon">
-          </div>
-        </div>
-        <div class="item-description d-col-9 t-col-10 m-col-12">
-          <h2>
-            Adobe Photoshop
-          </h2>
-          <p>
-              What I use to create fast wireframes, comps, and a lot of web imagery.
-          </p>
-          <!-- Trigger/Open The Modal -->
-          <button id="BtnPhotoshop">Examples</button>
-          <!-- photoshop pop-modal -->
-          <div id="ModalPhotoshop" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="item-icon">
-                  <img src="assets/icons/ps.png" alt="icon">
-              </div>
-              <h3>
-                Photoshop
-              </h3>
-              <img class="item-modal-image" src="assets/photoshop/parsbee.png">
-              <img class="item-modal-image" src="assets/photoshop/item-details-comp.png">
-              <img class="item-modal-image" src="assets/photoshop/easymount.jpg">
-              <img class="item-modal-image" src="assets/photoshop/epson.jpg">
-              <img class="item-modal-image" src="assets/photoshop/optima.jpg">
-
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/ps.png" alt="icon">
             </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Orb of Photoshop
+            </h2>
+            <p>
+                The Orb was first obtained sometime during highschool. Underutilized until college, where I mastered some of it's basic features. Currently, The Orb is upgraded to create quick wireframes, comps, image touch-ups, and more artsy things when paired with a Wacom Tablet.
+            </p>
           </div>
         </div>
       </div>
 
       <!-- Illustrator -->
       <div id="item-illustrator-details" class="item-details flex-grid">
-        <div class="d-col-3 t-col-2 m-col-4">
-          <div class="item-icon">
-              <img src="assets/iconSpring_Ai.ico" alt="icon">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/il.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Orb of Illustrator
+            </h2>
+            <p>
+                This Orb was found with along with a package called "Creative Cloud." Currently being used to create vector graphics and large print desings.
+            </p>
           </div>
         </div>
-        <div class="item-description d-col-9 t-col-10 m-col-12">
-          <h2>
-            Adobe Illustrator
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a dapibus nibh. Maecenas est sem, vestibulum at tempor vitae, vulputate eu metus. Pellentesque nunc tellus, consequat nec eleifend eget, tincidunt vitae sapien. Nulla lectus diam, venenatis vel finibus aliquet,
-          </p>
-          <!-- Trigger/Open The Modal -->
-          <button id="myBtn">Examples</button>
-          <!-- photoshop pop-modal -->
-          <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="item-icon">
-                  <img src="assets/iconSpring_Ai.ico" alt="icon">
-              </div>
-              <h3>
-                Adobe Illustrator
-              </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a dapibus nibh. Maecenas est sem, vestibulum at tempor vitae, vulputate eu metus. Pellentesque nunc tellus, consequat nec eleifend eget, tincidunt vitae sapien. Nulla lectus diam, venenatis vel finibus aliquet.</p>
+      </div>
+
+      <!-- Indesign -->
+      <div id="item-indesign-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/id.png" alt="icon">
             </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Orb of InDesign
+            </h2>
+            <p>
+              The Orb was used first in a just couple college classes. I later found this Orb becaming a staple for creating any print project.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Html -->
+      <div id="item-html-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/html.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              HTML Potion
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Css -->
+      <div id="item-css-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/css.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              CSS Elixer
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Js -->
+      <div id="item-js-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/js.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              JavaScript Brew
+            </h2>
+            <p>
+              Brewed from a wizard that thought the term "java" was trendy. This brew is pulled out to make some real magic happen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3d -->
+      <div id="item-3d-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/3d.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Cube of The Third Demension
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div id="item-email-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/email.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Envelope
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand-Shield -->
+      <div id="item-brand-shield-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/brand-shield.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Brand Shield
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book -->
+      <div id="item-print-book-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/print-book.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Book of Print Design
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key -->
+      <div id="item-key-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/key.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Key of Frames
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brush -->
+      <div id="item-brush-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/brush.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Brush
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Magnifying Glass -->
+      <div id="item-magnifying-glass-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/magnifying-glass.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Magnifying Glass
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Spyglass -->
+      <div id="item-spyglass-details" class="item-details flex-grid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="item-icon">
+                <img src="assets/icons/spyglass.png" alt="icon">
+            </div>
+          </div>
+          <div class="item-description col-lg-9">
+            <h2>
+              Scope Spyglass
+            </h2>
+            <p>
+              One of the most commonily used potions in all the land. So pure and simple. Not sure where it gets its blue color from... maybe a reflection from the sky.
+            </p>
           </div>
         </div>
       </div>
@@ -227,37 +524,34 @@
 
 <!-- MAP SECTION -->
 
-    <section class="map flex-wrapper">
-      <div class="navi flex-grid">
-        <div class="d-col-3 t-col-2 m-col-4">
+    <section class="map">
+      <div class="navi row">
+        <div class="col-lg-3 col-sm-3">
           <div class="heart">
-            <img src="assets/heart.png" alt="icon">
-            <img src="assets/heart.png" alt="icon">
-            <img src="assets/heart.png" alt="icon">
-            <img src="assets/heart.png" alt="icon">
-            <h3>
-              Nick Wright
-            </h3>
+            <img src="assets/icons/heart.png" alt="icon">
+            <img src="assets/icons/heart.png" alt="icon">
+            <img src="assets/icons/heart.png" alt="icon">
+            <img src="assets/icons/heart.png" alt="icon">
           </div>
         </div>
-        <div class="header d-col-2 t-col-2 m-col-4">
-          <h1>
+        <div class="header col-lg-2 col-sm-2" onclick="goToSection(0)">
+          <p>
             Quests
-          </h1>
+          </p>
         </div>
-        <div class="header d-col-2 t-col-2 m-col-2">
-          <h1>
-            Items
-          </h1>
+        <div class="header col-lg-2 col-sm-2" onclick="goToSection(1)">
+          <p>
+            Inventory
+          </p>
         </div>
-        <div class="header d-col-2 t-col-2 m-col-4">
-          <h1>
+        <div class="header-selected header col-lg-2 col-sm-2">
+          <p>
             Map
-          </h1>
+          </p>
         </div>
-        <div class="d-col-3 t-col-2 m-col-4">
+        <div class="col-lg-3 col-sm-3">
           <div class="coin">
-            <img src="assets/coin.png" alt="icon">
+            <img src="assets/icons/coin.png" alt="icon">
             <h3>
             53
             </h3>
@@ -265,14 +559,12 @@
         </div>
       </div>
       <div class="menu-content map-menu flex-grid">
-
           <div id="map"></div>
           <!-- Replace the value of the key parameter with your own API key. -->
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdRrxv1Cx_cS9uiq3G4L0VUT7EuG97FuM&callback=initMap" async defer></script>
-
       </div>
 
-      <button type="button" class="menu-arrow left" onclick="goToSection(1)"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+      <button type="button" class="menu-arrow left" onclick="goToSection(1)"></button>
     </section>
 </body>
 <script>

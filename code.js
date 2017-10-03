@@ -1,51 +1,81 @@
 function noSelect() {
   var container = $(".item-details");
-  container.hide(100);
+  container.hide(150);
 };
 
 
 $(document).ready(function(){
-    $("#item-photoshop-icon").click(function(){
-        $("#item-photoshop-details").toggle(100);
+    $("#item-photoshop-icon").hover(function(){
+        $("#item-photoshop-details").toggle(150);
         return false;
     });
 
-    $("#item-illustrator-icon").click(function(){
-        $("#item-illustrator-details").toggle(100);
+    $("#item-illustrator-icon").hover(function(){
+        $("#item-illustrator-details").toggle(150);
+        return false;
+    });
+
+    $("#item-indesign-icon").hover(function(){
+        $("#item-indesign-details").toggle(150);
+        return false;
+    });
+
+    $("#item-html-icon").hover(function(){
+        $("#item-html-details").toggle(150);
+        return false;
+    });
+
+    $("#item-css-icon").hover(function(){
+        $("#item-css-details").toggle(150);
+        return false;
+    });
+
+    $("#item-js-icon").hover(function(){
+        $("#item-js-details").toggle(150);
+        return false;
+    });
+
+    $("#item-3d-icon").hover(function(){
+        $("#item-3d-details").toggle(150);
+        return false;
+    });
+
+    $("#item-email-icon").hover(function(){
+        $("#item-email-details").toggle(150);
+        return false;
+    });
+
+    $("#item-brand-shield-icon").hover(function(){
+        $("#item-brand-shield-details").toggle(150);
+        return false;
+    });
+
+    $("#item-print-book-icon").hover(function(){
+        $("#item-print-book-details").toggle(150);
+        return false;
+    });
+
+    $("#item-key-icon").hover(function(){
+        $("#item-key-details").toggle(150);
+        return false;
+    });
+
+    $("#item-brush-icon").hover(function(){
+        $("#item-brush-details").toggle(150);
+        return false;
+    });
+
+    $("#item-magnifying-glass-icon").hover(function(){
+        $("#item-magnifying-glass-details").toggle(150);
+        return false;
+    });
+
+    $("#item-spyglass-icon").hover(function(){
+        $("#item-spyglass-details").toggle(150);
         return false;
     });
 });
 
-
-
-$(document).mouseup(function(e){
-    var container = $(".item-details");
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0){
-        container.hide(100);
-    }
-});
-
-// Get the modal
-var modal = document.getElementById('ModalPhotoshop');
-// Get the button that opens the modal
-var btn = document.getElementById("BtnPhotoshop");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 
 //Slider layout
@@ -55,7 +85,7 @@ function goToSection (num) {
 }
 
 
-
+// Map
 var map;
 function initMap() {
   var myLatLng = {lat: 42.962394, lng: -85.667909};

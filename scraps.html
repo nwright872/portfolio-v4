@@ -1,0 +1,81 @@
+<!-- Trigger/Open The Modal -->
+<button id="BtnPhotoshop">Examples</button>
+<!-- photoshop pop-modal -->
+<div id="ModalPhotoshop" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="item-icon">
+        <img src="assets/icons/ps.png" alt="icon">
+    </div>
+    <h3>
+      Photoshop
+    </h3>
+    <img class="item-modal-image" src="assets/request-quote1.png">
+    <img class="item-modal-image" src="assets/photoshop/item-details-comp.png">
+    <img class="item-modal-image" src="assets/photoshop/easymount.jpg">
+    <img class="item-modal-image" src="assets/photoshop/epson.jpg">
+    <img class="item-modal-image" src="assets/photoshop/optima.jpg">
+  </div>
+</div>
+
+<article id="quest-1">
+  <h2>Request a Quote Feature</h2>
+  <p>Tasked with creating a feature for large format equipment</p>
+  <img class="item-modal-image" src="assets/request-quote1.png">
+</article>
+
+<!-- Trigger/Open The Modal -->
+<button id="BtnPhotoshop">Examples</button>
+<!-- photoshop pop-modal -->
+<div id="ModalPhotoshop" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="item-icon">
+        <img src="assets/icons/ps.png" alt="icon">
+    </div>
+    <h3>
+      Adobe Illustrator
+    </h3>
+    <img class="item-modal-image" src="assets/photoshop/parsbee.png">
+    <img class="item-modal-image" src="assets/photoshop/item-details-comp.png">
+    <img class="item-modal-image" src="assets/photoshop/easymount.jpg">
+    <img class="item-modal-image" src="assets/photoshop/epson.jpg">
+    <img class="item-modal-image" src="assets/photoshop/optima.jpg">
+
+  </div>
+</div>
+</div>
+</div>
+
+
+// $(document).mouseup(function(e){
+//     var container = $(".item-details");
+//     // if the target of the click isn't the container nor a descendant of the container
+//     if (!container.is(e.target) && container.has(e.target).length === 0){
+//         container.hide(100);
+//     }
+// });
+
+
+// Get the modal
+var modal = document.getElementById('ModalPhotoshop');
+// Get the button that opens the modal
+var btn = document.getElementById("BtnPhotoshop");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
