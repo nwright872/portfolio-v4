@@ -1,82 +1,16 @@
-function noSelect() {
-  var container = $(".item-details");
-  container.hide(150);
-};
 
-
+//Item details pop-up
 $(document).ready(function(){
-    $("#item-photoshop-icon").hover(function(){
-        $("#item-photoshop-details").toggle(150);
-        return false;
-    });
-
-    $("#item-illustrator-icon").hover(function(){
-        $("#item-illustrator-details").toggle(150);
-        return false;
-    });
-
-    $("#item-indesign-icon").hover(function(){
-        $("#item-indesign-details").toggle(150);
-        return false;
-    });
-
-    $("#item-html-icon").hover(function(){
-        $("#item-html-details").toggle(150);
-        return false;
-    });
-
-    $("#item-css-icon").hover(function(){
-        $("#item-css-details").toggle(150);
-        return false;
-    });
-
-    $("#item-js-icon").hover(function(){
-        $("#item-js-details").toggle(150);
-        return false;
-    });
-
-    $("#item-3d-icon").hover(function(){
-        $("#item-3d-details").toggle(150);
-        return false;
-    });
-
-    $("#item-email-icon").hover(function(){
-        $("#item-email-details").toggle(150);
-        return false;
-    });
-
-    $("#item-brand-shield-icon").hover(function(){
-        $("#item-brand-shield-details").toggle(150);
-        return false;
-    });
-
-    $("#item-print-book-icon").hover(function(){
-        $("#item-print-book-details").toggle(150);
-        return false;
-    });
-
-    $("#item-key-icon").hover(function(){
-        $("#item-key-details").toggle(150);
-        return false;
-    });
-
-    $("#item-brush-icon").hover(function(){
-        $("#item-brush-details").toggle(150);
-        return false;
-    });
-
-    $("#item-magnifying-glass-icon").hover(function(){
-        $("#item-magnifying-glass-details").toggle(150);
-        return false;
-    });
-
-    $("#item-spyglass-icon").hover(function(){
-        $("#item-spyglass-details").toggle(150);
-        return false;
-    });
+  $('.box').hover(function() {
+    var showDetails = '#details-' + this.id;
+    $(showDetails).show(100);
+    console.log('hoved');
+  }, function() {
+    var showDetails = '#details-' + this.id;
+    $(showDetails).hide(100);
+    console.log('unhoved');
+  });
 });
-
-
 
 //Slider layout
 function goToSection (num) {

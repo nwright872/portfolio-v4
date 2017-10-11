@@ -9,7 +9,7 @@ html{
 }
 
 body{
-  background:url(assets/background.jpg) no-repeat center center fixed;
+  background:url(assets/background-blur.png) no-repeat center center fixed;
   background-size: cover;
   padding:10px;
   overflow: hidden;
@@ -71,8 +71,8 @@ section.map {
   top: 2%;
 }
 .xpos0 .map {
-  left: 200vw;
-  top: -2%;
+    left: 200vw;
+    top: 2%;
 }
 .xpos2 .quests {
   left: -200vw;
@@ -219,6 +219,7 @@ li.box img{
   width: 80vw;
   left: 10vw;
   padding-right: 33px;
+  display: none;
 }
 
 .item-details h2{
@@ -234,7 +235,6 @@ li.box img{
 
 
 .item-description{
-  /*font-size: larger;*/
   text-align: left;
   padding-left: 10px;
 }
